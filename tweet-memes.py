@@ -9,14 +9,15 @@ import os
 # Cargar las variables de entorno
 load_dotenv(dotenv_path="./Apis.evn")
 
-API_KEY = os.getenv("YOU API_KEY")
-API_SECRET = os.getenv("YOU API_SECRET")
-BEARER_TOKEN = os.getenv("YOU BEARER_TOKEN")
-ACCESS_TOKEN = os.getenv("YOU ACCESS_TOKEN")
-ACCESS_SECRET = os.getenv("YOU ACCESS_SECRET")
+API_KEY = os.getenv("API_KEY")
+API_SECRET = os.getenv("API_SECRET")
+BEARER_TOKEN = os.getenv("BEARER_TOKEN")
+ACCESS_TOKEN = os.getenv("ACCESS_TOKEN")
+ACCESS_SECRET = os.getenv("ACCESS_SECRET")
 
 # Crear el cliente de Tweepy
 client = tweepy.Client(BEARER_TOKEN, API_KEY, API_SECRET, ACCESS_TOKEN, ACCESS_SECRET)
+
 
 try:
     response = client.get_me()
